@@ -23,7 +23,7 @@
 		<spring.version>5.0.2.RELEASE</spring.version>
 		<junit.version>4.12</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://204.236.213.214:9000/</sonar.host.url>
+		<sonar.host.url>http://18.206.170.57:9000/</sonar.host.url>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -90,12 +90,12 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>MithunTechnologiesReleasesNexusRepository</name>
-	      <url>http://ec2-34-204-77-208.compute-1.amazonaws.com:8081/repository/MithunTechnologiesReleasesNexusRepository/</url>
+	      <url>http://ec2-3.89.5.128.compute-1.amazonaws.com:8081/repository/MithunTechnologiesReleasesNexusRepository/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>paytm-snapshot</name>
-	      <url>http://ec2-34-204-77-208.compute-1.amazonaws.com:8081/repository/paytm-snapshot/</url>
+	      <url>http://ec2-3.89.5.128.compute-1.amazonaws.com:8081/repository/paytm-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement>
 	
