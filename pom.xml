@@ -84,6 +84,7 @@
 			<scope>provided</scope>
 		</dependency>
 
+	<!.. 
 	</dependencies>
 	
 	<distributionManagement>
@@ -98,7 +99,7 @@
 	      <url>http://ec2-52-90-117-55.compute-1.amazonaws.com:8081/repository/paytm-snapshot/</url>
 	    </snapshotRepository>
 	</distributionManagement>
-	
+	..>
 	<build>
 		<finalName>maven-web-application</finalName>
 		<plugins>
