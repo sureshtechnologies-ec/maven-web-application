@@ -86,7 +86,7 @@
 		</dependency>
 
 	</dependencies>
-	
+	<!--
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
@@ -99,7 +99,7 @@
 	      <url>http://13.232.140.161:8081/repository/Maven_1/</url>
 	    </snapshotRepository>
 	</distributionManagement>
-	
+	-->
 	<build>
 		<finalName>maven-web-application</finalName>
 		<plugins>
