@@ -12,7 +12,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Mithun Technologies.</h1>
+<h1 align="center">Welcome to Suresh Technologies.</h1>
 <h1 align="center">Very Good Training providing  and also for Job Assitance... and Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <div style="text-align: center;">
@@ -22,7 +22,7 @@
 	</span>
 	<span style="font-weight: bold;">
 		Suresh Technologies, 
-		Freelancer, devops suport, AWS-Support 
+		Freelancer, DevOps,AWS-Support,  
 		Hyderabad.
 		+91-9010588528
 	</span>
@@ -30,7 +30,7 @@
 <hr>
 	<p> Service : <a href="${pageContext.request.contextPath}/services/getEmployeeDetails">Get Employee Details </p>
 <hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
+<p align=center>Suresh Technologies - Consultant, Freelancer, DevOps,AWS-Support, .</p>
 <p align=center><small>Copyrights 2018 by <a href="http://sureshtechnologies.com/">Suresh Technologies</a> </small></p>
 
 </body>
