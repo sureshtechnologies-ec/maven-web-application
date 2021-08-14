@@ -99,7 +99,22 @@
 	      <url>http://13.232.140.161:8081/repository/Maven_1/</url>
 	    </snapshotRepository>
 	</distributionManagement>
+
 	-->
+	<pluginRepository>
+    <id>central</id>
+    <!-- This can be any URL -->
+    <!-- even something like 'http://central/' will work fine -->
+    <url>http://repo1.maven.org/maven2/</url>
+    <releases>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+    </releases>
+    <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+    </snapshots>
+</pluginRepository>
 	<build>
 		<finalName>maven-web-application</finalName>
 		<plugins>
