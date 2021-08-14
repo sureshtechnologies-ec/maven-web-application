@@ -75,7 +75,11 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+		<dependency>
+  			<groupId>maven-web-application</groupId>
+ 			 <artifactId>maven-web-application</artifactId>
+  			<version>1.0-20210814.134727-3</version>
+		</dependency>
 		<!-- provided dependencies -->
 
 		<dependency>
