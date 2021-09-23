@@ -6,3 +6,4 @@ ENTRYPOINT ["java","-jar","maven-web-application.war"]
 
 
 #adding some file
+#adding 2nd file
