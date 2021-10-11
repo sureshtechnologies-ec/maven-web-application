@@ -8,4 +8,5 @@ ENTRYPOINT ["java","-jar","maven-web-application.war"]
 #adding some file
 #adding 2nd file
 #adding 2nd tocken
-takepull
+#takepull
+#adding from local
