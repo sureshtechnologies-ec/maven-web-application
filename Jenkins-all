@@ -1,0 +1,40 @@
+pipeline {
+agent any 
+stages {
+stage("build info"){
+stpes {
+echo '**** START BUILD-INFO ****'
+echo "BUILD_TAG --> ${env.BUILD_TAG}"
+echo '*** END BUILD-INFO***'
+  }
+}
+stage("Get User Input")
+steps{
+echo '******START GET USER-INPUT *****'
+script {
+
+properties([
+parameters([
+extendedChoice(defaultValue: 'sureshtechnologies-ec/ maven-web-application', description: 'enter suresh repo, format: ${username}/${repo-name}(e.g. sureshtechnologies-ec/ maven-web-application)', multiSelectDelimiter: ',', name: 'Git-repo', quoteValue: false, saveJSONParameterToFile: false, type: 'PT_TEXTBOX', visibleItemCount: 5), 
+[$class: 'CascadeChoiceParameter', choiceType: 'PT_SINGLE_SELECT', filterLength: 1, filterable: false, name: 'git_repo_branch', randomName: 'choice-parameter-2934471807099', referencedParameters: 'Git-repo', script: [$class: 'GroovyScript', fallbackScript: [classpath: [], sandbox: false, script: ''], script: [classpath: [], sandbox: false,
+script: '''
+def gitURL = "git@github.com:${Git-repo}.git"
+def command = "git ls-remote -h $gitURL"
+def proc = command.execute()
+proc.waitfor()
+if ( proc.exitValue() != 0 ) {
+println "Error, ${proc.err.text}"
+return
+}
+def branches = proc.in.text.readLines().collect {
+it.repalceAll(/[a-z0-9]*\\trefs\\/head\\//,\'\')
+}
+return branches
+'''
+]]]])])
+}
+echo '******END GET-USER-INPUT ****'
+}
+}
+}
+}
