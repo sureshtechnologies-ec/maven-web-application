@@ -13,7 +13,7 @@ stages {
         stage('maven build'){
        steps{
            echo "building the jars"
-            "./mvn build"
+           sh " mvn clean package "
         }
         }
 }
