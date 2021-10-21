@@ -1,5 +1,8 @@
 pipeline {
 agent any 
+environment{
+    PATH = "/opt/maven/bin:$PATH"
+}
 stages {
       stage('checkout') {
          steps {
@@ -7,5 +10,11 @@ stages {
             git 'https://github.com/sureshtechnologies-ec/maven-web-application.git'
         }
         }
+        stage('maven build'){
+       steps{
+           echo "building the jars"
+            "./mvn build"
         }
         }
+}
+}
