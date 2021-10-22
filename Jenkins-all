@@ -13,7 +13,7 @@ stages {
         stage('maven build'){
        steps{
            echo "building the jars"
-           sh " mvn clean package "
+           sh " mvn clean deploy "
         }
         }
         stage('SonarQube analysis') {
