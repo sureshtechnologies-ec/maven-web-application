@@ -35,7 +35,7 @@ sshagent(['tomcat-user']){
     
     }
     }
-    stage('nexus-upload'){
+    <!--stage('nexus-upload'){
        steps{
        nexusArtifactUploader artifacts: [
        [
@@ -53,7 +53,7 @@ sshagent(['tomcat-user']){
        repository: 'http://3.19.188.249:8081/repository/nexus-repo',
        version: '2.2-SNAPSHOT'
        }
-       }
+       }-->
     stage('SendEmailNotification'){
     steps{
         mail bcc: 'sureshgec201@gmail.com', body: '''deployment done.
