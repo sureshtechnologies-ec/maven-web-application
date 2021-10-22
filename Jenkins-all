@@ -35,6 +35,15 @@ sshagent(['tomcat-user']){
     
     }
     }
+    stage('SendEmailNotification'){
+    steps{
+        mail bcc: 'sureshgec201@gmail.com', body: '''deployment done.
+        Regards,
+        suresh,
+      9010588528.
+        ''', cc: 'sureshdevops1010@gmail.com', from: 'sureshgec201@gmail.com', replyTo: 'sureshgec201@gmail.com', subject: 'Deployment done', to: 'sureshgec201@gmail.com'
+    }
+    }
 }
 }
 
