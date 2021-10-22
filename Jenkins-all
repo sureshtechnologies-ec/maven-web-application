@@ -41,13 +41,13 @@ sshagent(['tomcat-user']){
        [
        artifactId: 'maven-web-application',
        classifier: '', 
-       file: 'target', 
+       file: '${target}', 
        type: 'war'
        ]
        ],
        credentialsId: 'nexus',
        groupId: 'com.mt',
-       nexusUrl: '3.19.188.249', 
+       nexusUrl: '3.19.188.249:8081', 
        nexusVersion: 'nexus3',
        protocol: 'http',
        repository: 'http://3.19.188.249:8081/repository/nexus-repo',
