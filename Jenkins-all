@@ -41,7 +41,7 @@ sshagent(['tomcat-user']){
        [
        artifactId: 'maven-web-application',
        classifier: '', 
-       file: 'target/maven-web-application.war', 
+       file: 'target', 
        type: 'war'
        ]
        ],
