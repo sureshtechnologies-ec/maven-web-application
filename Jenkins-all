@@ -28,7 +28,7 @@ stages {
 }
  stage('tomcat-deploy'){
        steps{
-sshagent(['tom2']){
+sshagent(['tomcat-user']){
                          
        sh "scp -o  StrictHostKeyChecking=no /root/.jenkins/workspace/all-in-one/target/maven-web-application.war ec2-user@3.19.188.249:/opt/tomcat/webapps/maven-web-application.war"
                                 }
