@@ -12,7 +12,7 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Naveen Technologies.</h1>
+<h1 align="center">Welcome to Naveen Technologies too.</h1>
 <h1 align="center">Very veryGood Training center for DevOps in Maratha Halli and also for Job Assitance... and Job Support also...Teaching Real Time scnerios</h1>
 <hr>
 <div style="text-align: center;">
