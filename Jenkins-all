@@ -26,7 +26,8 @@ stages {
 }
 }
 }
-#hiiiiiiiiiii
+#hi
+#newone
  stage('tomcat-deploy'){
        steps{
 sshagent(['tomcat-user']){
