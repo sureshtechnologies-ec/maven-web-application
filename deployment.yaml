@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: spring-petclinic
-        image: suresha10/maven-web-application
+        image: suresha10/maven-web-application:latest
         ports:
         - containerPort: 8082		
 ---		
