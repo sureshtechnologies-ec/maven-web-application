@@ -1,0 +1,10 @@
+pipeline{
+    agent any 
+    stages{
+        stage(" Git welcome"){
+            steps{
+                git credentialsId: 'Git', url: 'https://github.com/sureshtechnologies-ec/maven-web-application.git'
+            }
+        }
+    }
+}
