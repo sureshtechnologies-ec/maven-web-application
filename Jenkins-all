@@ -19,7 +19,7 @@ stages {
         
  stage('tomcat-deploy'){
        steps{                
-       sh "scp -o  /root/.jenkins/workspace/all-in-one/target/maven-web-application.war ec2-user@3.19.188.249:/opt/tomcat/webapps/maven-web-application.war"
+       sh "scp  /root/.jenkins/workspace/all-in-one/target/maven-web-application.war /opt/tomcat/webapps/maven-web-application.war"
                                 }
     
     }
