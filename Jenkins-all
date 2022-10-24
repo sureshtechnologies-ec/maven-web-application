@@ -16,55 +16,16 @@ stages {
            sh " mvn clean package "
         }
         }
-        stage('SonarQube analysis') {
-//    def scannerHome = tool 'SonarScanner 4.0';
-        steps{
-        withSonarQubeEnv('sonar-server') { 
-        // If you have configured more than one global server connection, you can specify its name
-//      sh "${scannerHome}/bin/sonar-scanner"
-        sh "mvn sonar:sonar"
-}
-}
-}
+        
 #hi
 #newone
  stage('tomcat-deploy'){
-       steps{
-sshagent(['tomcat-user']){
-                         
-       sh "scp -o  StrictHostKeyChecking=no /root/.jenkins/workspace/all-in-one/target/maven-web-application.war ec2-user@3.19.188.249:/opt/tomcat/webapps/maven-web-application.war"
+       steps{                
+       sh "scp -o  /root/.jenkins/workspace/all-in-one/target/maven-web-application.war ec2-user@3.19.188.249:/opt/tomcat/webapps/maven-web-application.war"
                                 }
     
     }
     }
-    stage('nexus-upload'){
-       steps{
-       nexusArtifactUploader artifacts: [
-       [
-       artifactId: 'maven-web-application',
-       classifier: '', 
-       file: '/root/.jenkins/workspace/all-in-one/target/maven-web-application.war', 
-       type: 'war'
-       ]
-       ],
-       credentialsId: 'nexus',
-       groupId: 'com.mt',
-       nexusUrl: '3.19.188.249:8081', 
-       nexusVersion: 'nexus3',
-       protocol: 'http',
-       repository: 'http://3.19.188.249:8081/repository/nexus-repo',
-       version: '2.2-SNAPSHOT'
-       }
-       }
-    stage('SendEmailNotification'){
-    steps{
-        mail bcc: 'sureshgec201@gmail.com', body: '''deployment done.
-        Regards,
-        suresh,
-      9010588528.
-        ''', cc: 'sureshdevops1010@gmail.com', from: 'sureshgec201@gmail.com', replyTo: 'sureshgec201@gmail.com', subject: 'Deployment done', to: 'sureshgec201@gmail.com'
-    }
-    }
-}
+  
 }
 
