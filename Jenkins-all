@@ -19,7 +19,7 @@ stages {
         
  stage('tomcat-deploy'){
        steps{                
-       sh "cp -r /root/.jenkins/workspace/all-in-one/target/maven-web-application.war /opt/tomcat/webapps/maven-web-application.war"
+       sh "cp  /root/.jenkins/workspace/diwali-wishes/target/maven-web-application.war /opt/tomcat/webapps/maven-web-application.war"
                                 }
     
     }
