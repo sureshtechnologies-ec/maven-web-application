@@ -1,9 +1,7 @@
-name: Maven Build and Docker Image
+name: Maven Build and Docker Push
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: [ "main" ]
 
 jobs:
@@ -11,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Source Code
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Set up JDK
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
@@ -25,18 +23,16 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t your-dockerhub-username/app-name:${{ github.sha }} .
+          docker build -t suresha10/workflow-github-action:${{ github.sha }} .
+          docker tag suresha10/workflow-github-action:${{ github.sha }} suresha10/workflow-github-action:tagname
 
-      # OPTIONAL: Login to Docker Hub
       - name: Login to Docker Hub
-        if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      # OPTIONAL: Push Image
-      - name: Push Docker Image
-        if: github.ref == 'refs/heads/main'
+      - name: Push Docker Images
         run: |
-          docker push your-dockerhub-username/app-name:${{ github.sha }}
+          docker push suresha10/workflow-github-action:${{ github.sha }}
+          docker push suresha10/workflow-github-action:tagname
