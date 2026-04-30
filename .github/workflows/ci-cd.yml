@@ -56,8 +56,8 @@ jobs:
       - name: Set AKS Context
         uses: azure/aks-set-context@v4
         with:
-          resource-group: myResourceGroup
-          cluster-name: myAKSCluster
+          resource-group: eks
+          cluster-name: eks-suresh
 
       # 🔹 Update image tag dynamically
       - name: Update Deployment Image
