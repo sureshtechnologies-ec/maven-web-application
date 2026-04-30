@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: maven-app
-        image: suresha10/workflow-github-action:tagname
+        image: suresha10/workflow-github-action:latest
         ports:
         - containerPort: 8080
